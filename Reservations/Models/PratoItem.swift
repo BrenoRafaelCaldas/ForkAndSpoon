@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct PratoItem: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-#Preview {
-    PratoItem()
+struct PratoItem: Identifiable {
+    
+    let id = UUID()
+    let name : String
+    let imagem : String
+    let preco : String
+    let descricao: String
+    
 }
