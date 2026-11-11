@@ -69,7 +69,7 @@ struct ReservationPortoCentro: View {
                                         .lineLimit(2)
                                     
                                     
-                                    Text("Acompanhe sua reserva por email, qualquer duvida entre em contato (+351) 987 654 321")
+                                    Text("Acompanhe sua reserva no seu perfil , qualquer dúvida entre em contato (+351) 987 654 321.")
                                         .padding()
                                         .font(Font.subheadline.bold())
                                         .multilineTextAlignment(.center)

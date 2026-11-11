@@ -74,7 +74,7 @@ struct ReservationGaia: View {
                                 .lineLimit(2)
                             
                             
-                            Text("Acompanhe sua reserva por email, qualquer duvida entre em contato (+351) 912 345 678")
+                            Text("Acompanhe sua reserva no seu perfil, qualquer dúvida entre em contato (+351) 912 345 678.")
                                 .padding()
                                 .font(Font.subheadline.bold())
                                 .multilineTextAlignment(.center)

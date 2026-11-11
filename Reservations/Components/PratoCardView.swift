@@ -20,7 +20,7 @@ struct PratoCardView: View {
             Image(prato.imagem)
                 .resizable()
                 .frame(width:320 ,height: 320, alignment: .center)
-                .clipShape(RoundedRectangle(cornerRadius: 25))
+                .clipShape(RoundedRectangle(cornerRadius: 40))
             
             Text(prato.name)
                 .font(.custom("Baskerville", size: 25))
@@ -44,7 +44,7 @@ struct PratoCardView: View {
         }
         .padding(18)
         .background(Color.white)
-        .cornerRadius(28)
+        .cornerRadius(50)
         .shadow(radius: 75)
         .padding(.horizontal, 22)
         

@@ -68,7 +68,7 @@ struct ReservationPorto: View {
                                     .lineLimit(2)
                                 
                                 
-                                Text("Acompanhe sua reserva por email, qualquer duvida entre em contato (+351) 965 415 093")
+                                Text("Acompanhe sua reserva no seu perfil, qualquer dúvida entre em contato (+351) 965 415 093.")
                                     .padding()
                                     .font(Font.subheadline.bold())
                                     .multilineTextAlignment(.center)
@@ -91,6 +91,7 @@ struct ReservationPorto: View {
     
 
 }
+
 func formatedDatePortugal(_ date: Date) -> String {
     let formatter = DateFormatter()
     formatter.locale = Locale(identifier: "pt_PT")
@@ -98,7 +99,6 @@ func formatedDatePortugal(_ date: Date) -> String {
     formatter.timeZone = TimeZone(identifier: "Europe/Porto")
     formatter.timeStyle = .short
     return formatter.string(from: date)
-
 }
         
 

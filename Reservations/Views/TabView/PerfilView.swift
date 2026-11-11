@@ -16,7 +16,10 @@ struct PerfilView: View {
         
         NavigationStack {
             
+            
+            
             List {
+                
                 
                 HStack {
                     
@@ -133,8 +136,13 @@ struct PerfilView: View {
                     }
                     .padding()
                 
-                .padding(5)
-                
+                Image("LogoPerfil")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 360, height: 220)
+                    .cornerRadius(30)
+                    .padding(.bottom, 60)
+                                
             }
             .padding(.top, 40)
             .ignoresSafeArea()

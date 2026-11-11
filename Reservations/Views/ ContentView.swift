@@ -10,9 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var selectedTab = 0
-    
-//    @State private var listaDeReservas: [String] = []
-    
+        
     let darkBlue = Color(red: 0.1137, green: 0.1647, blue: 0.3961)
     let gold = Color(red: 0.81, green: 0.67, blue: 0.30)
     
