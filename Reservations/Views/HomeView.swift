@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct HomeView: View {
-
-    @Binding var reservasConfirmadas: [String]
     
     var body: some View {
 
@@ -40,7 +38,7 @@ struct HomeView: View {
                     .frame(height: 1)
                     .background(Color(.black))
                 
-                LojaGaia(reservas: $reservasConfirmadas)
+                LojaGaia()
                     .frame(width: 390, height: 95)
                     .cornerRadius(10)
                     .shadow(radius: 10)
@@ -70,6 +68,6 @@ struct HomeView: View {
 }
 
 #Preview {
-    HomeView(reservasConfirmadas: .constant([]))
+    HomeView()
     
 }

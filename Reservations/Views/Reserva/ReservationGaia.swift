@@ -13,8 +13,6 @@ struct ReservationGaia: View {
     @State private var selectedDate = Date()
     @State private var mostrarSheet = false
     
-    @Binding var ListaReservas: [String]
-
     let darkBlue = Color(red: 0.1137, green: 0.1647, blue: 0.3961)
     let gold = Color(red: 0.8039, green: 0.7059, blue: 0.603)
 
@@ -52,9 +50,6 @@ struct ReservationGaia: View {
 
                     Button("Cofirmar Reserva") {
                         mostrarSheet = true
-//                        let novaReserva = "Vila Nova de Gaia - \(formatedDatePortugal(selectedDate))"
-//                        ListaReservas.append(novaReserva)
-//                        mostrarSheet = true
                     }
                     .padding(15)
                     .foregroundStyle(.black)
@@ -118,5 +113,5 @@ struct ReservationGaia: View {
 
 
 #Preview {
-    ReservationGaia(ListaReservas: .constant([]))
+    ReservationGaia()
 }

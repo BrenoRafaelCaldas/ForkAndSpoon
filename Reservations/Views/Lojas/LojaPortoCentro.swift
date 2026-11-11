@@ -49,7 +49,7 @@ struct LojaPortoCentro: View {
         .padding(10)
         
         .sheet(isPresented: $showReservationPortoCentro) {
-        ReservationPortoCentro()
+         ReservationPortoCentro()
         .presentationDetents([.medium, .large])
         .presentationDragIndicator(.visible)
         }
@@ -62,4 +62,3 @@ struct LojaPortoCentro: View {
 
 
 
-//"Avenida Gustavo Eiffel, 272"

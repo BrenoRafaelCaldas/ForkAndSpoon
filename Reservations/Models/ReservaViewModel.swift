@@ -33,7 +33,7 @@ class ReservasViewModel: ObservableObject {
     func carregarReservasIniciais() {
         self.reservas = [
             ReservaModel(restaurante: "F&S - Vila Nova de Gaia",
-                         datahora: Date(),
+                         datahora: Date().addingTimeInterval(86400),
                          numeroPessoas: 2,
                          status: "Confirmada"),
             

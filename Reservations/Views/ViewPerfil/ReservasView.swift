@@ -98,12 +98,15 @@ struct ReservasView: View {
             
             VStack(alignment: .leading, spacing: 10){
                 Text(reserva.restaurante)
-                    .font(.headline)
+                    .font(.headline.bold())
                     .foregroundStyle(.white)
                 
+                Text(reserva.datahora.formatted())
+                    .font(.subheadline.bold())
+                    .foregroundStyle(.gray.opacity(0.7))
                 
                 Text("Mesa para \(reserva.numeroPessoas) pessoas")
-                    .font(.caption)
+                    .font(.caption.bold())
                     .foregroundStyle(.gray)
             }
             Spacer()

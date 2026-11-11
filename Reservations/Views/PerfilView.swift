@@ -8,9 +8,7 @@
 import SwiftUI
 
 struct PerfilView: View {
-    
-    @Binding var reservas: [String]
-    
+        
     let darkBlue = Color(red: 0.1137, green: 0.1647, blue: 0.3961)
     let gold = Color(red: 0.81, green: 0.67, blue: 0.30)
     
@@ -146,5 +144,5 @@ struct PerfilView: View {
 }
 
 #Preview {
-    PerfilView(reservas: .constant([]))
+    PerfilView()
 }

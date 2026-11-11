@@ -53,7 +53,7 @@ struct LojaPorto: View {
         .padding(10)
         
         .sheet(isPresented: $showReservationPorto) {
-        ReservationPorto()
+         ReservationPorto()
         .presentationDetents([.medium, .large])
         .presentationDragIndicator(.visible)
         }

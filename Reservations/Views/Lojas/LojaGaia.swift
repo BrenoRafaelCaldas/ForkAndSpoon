@@ -11,7 +11,6 @@ struct LojaGaia: View {
     
     @State private var showReservationGaia = false
     
-    @Binding var reservas: [String]
     
     let darkBlue = Color(red: 0.1137, green: 0.1647, blue: 0.3961)
     let gold = Color(red: 0.81, green: 0.67, blue: 0.30)
@@ -50,13 +49,16 @@ struct LojaGaia: View {
             }
         }
         .padding(10)
-        
         .sheet(isPresented: $showReservationGaia) {
-            ReservationGaia(ListaReservas: $reservas)
+         ReservationGaia()
+        .presentationDetents([.medium, .large])
+        .presentationDragIndicator(.visible)
+            
         }
     }
+    
 }
 
 #Preview {
-    LojaGaia(reservas: .constant([]))
+    LojaGaia()
 }
