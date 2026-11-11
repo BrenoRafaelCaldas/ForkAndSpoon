@@ -80,22 +80,21 @@ struct MenuView: View {
         
     var body: some View {
             
-            ScrollView {
+        ScrollView {
+            
+            VStack(alignment: .center, spacing: 32) {
                 
-                VStack(alignment: .center, spacing: 32) {
+                VStack(alignment: .center, spacing: 12) {
                     
-                    VStack(alignment: .center, spacing: 12) {
-                        
-                        Text("Entradas")
-                            .font(.system(size: 35, weight: .bold, design: .serif))
-                            .padding(.top, 40)
-                            .padding(.bottom, 20)
-                            .foregroundStyle(.white)
-                            
-                        
-                        ForEach(entradas) { item in
-                            PratoCardView(prato: item)
-                        }
+                    Text("Entradas")
+                        .font(.system(size: 35, weight: .bold, design: .serif))
+                        .padding(.top, 40)
+                        .padding(.bottom, 20)
+                        .foregroundStyle(.white)
+                    
+                    
+                    ForEach(entradas) { item in
+                        PratoCardView(prato: item)
                     }
                     
                     VStack(alignment: .center, spacing: 12) {
@@ -123,21 +122,25 @@ struct MenuView: View {
                             PratoCardView(prato: item)
                         }
                     }
-                  
+                    
                 }
                 
             }
-            .background(
-                LinearGradient (
-                    colors: [
-                        Color(red: 0.18, green: 0.15, blue: 0.08),
-                        Color(red: 0.81, green: 0.67, blue: 0.40),
-                        Color(red: 0.22, green: 0.25, blue: 0.40)
-                    ], startPoint: .topLeading,
-                    endPoint: .bottomTrailing
-                )
+            .padding(28)
+            .padding(.bottom, 10)
+           
+        }
+        .ignoresSafeArea()
+        .background(
+            LinearGradient (
+                colors: [
+                    Color(red: 0.18, green: 0.15, blue: 0.08),
+                    Color(red: 0.81, green: 0.67, blue: 0.38),
+                    Color(red: 0.22, green: 0.25, blue: 0.40)
+                ], startPoint: .topLeading,
+                endPoint: .bottomTrailing
             )
-                    
+        )
     }
 }
 

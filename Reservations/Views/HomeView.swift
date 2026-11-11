@@ -19,7 +19,7 @@ struct HomeView: View {
                 Image("Logo")
                     .resizable()
                     .frame(width:405 ,height: 370)
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .clipShape(RoundedRectangle(cornerRadius: 15))
                     .ignoresSafeArea()
                                     
                 Text("Conheça nossas lojas")
@@ -35,7 +35,6 @@ struct HomeView: View {
                     .cornerRadius(10)
                     .shadow(radius: 10)
                  
-                Spacer()
                 
                 Divider()
                     .frame(height: 1)

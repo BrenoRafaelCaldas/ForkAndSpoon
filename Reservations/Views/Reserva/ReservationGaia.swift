@@ -51,10 +51,10 @@ struct ReservationGaia: View {
                     
 
                     Button("Cofirmar Reserva") {
-//                        mostrarSheet = true
-                        let novaReserva = "Vila Nova de Gaia - \(formatedDatePortugal(selectedDate))"
-                        ListaReservas.append(novaReserva)
                         mostrarSheet = true
+//                        let novaReserva = "Vila Nova de Gaia - \(formatedDatePortugal(selectedDate))"
+//                        ListaReservas.append(novaReserva)
+//                        mostrarSheet = true
                     }
                     .padding(15)
                     .foregroundStyle(.black)
