@@ -47,7 +47,7 @@ struct PerfilView: View {
                 }
                 .padding(10)
                 
-                NavigationLink(destination: Reservas(reservas: $reservas)){
+                NavigationLink(destination: ReservasView()){
                     
                     HStack {
                     
