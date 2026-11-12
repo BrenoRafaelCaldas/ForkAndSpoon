@@ -29,6 +29,8 @@ struct PratoCardView: View {
                 .frame(width: 300)
                 .padding(.top, 10)
             
+            Divider()
+            
             Text(prato.descricao)
                 .font(.custom("Baskerville", size: 19))
                 .multilineTextAlignment(.center)
@@ -37,7 +39,7 @@ struct PratoCardView: View {
                 .padding(.top, 4)
             
             Text(prato.preco)
-                .font(.custom("Baskerville", size: 22))
+                .font(.title3.bold())
                 .fontWeight(.semibold)
                 .padding(.top, 6)
                 .padding(.bottom)
@@ -45,7 +47,7 @@ struct PratoCardView: View {
         .padding(18)
         .background(Color.white)
         .cornerRadius(50)
-        .shadow(radius: 75)
+        .shadow(radius: 95)
         .padding(.horizontal, 22)
         
     }

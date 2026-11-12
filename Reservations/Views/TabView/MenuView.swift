@@ -78,69 +78,59 @@ struct MenuView: View {
                   descricao: "Base crocante de massa doce recheada com creme de limão siciliano de acidez vibrante. Finalizada com merengue italiano delicadamente tostado, criando um contraste entre crocante, cremoso e leveza cítrica.")
     ]
         
+    let darkBlue = Color(red: 0.1003, green: 0.1023, blue: 0.2625)
+    let gold = Color(red: 0.81, green: 0.67, blue: 0.30)
+    
     var body: some View {
-            
+        
         ScrollView {
             
-            VStack(alignment: .center, spacing: 32) {
+            VStack(alignment: .center, spacing: 4) {
                 
-                VStack(alignment: .center, spacing: 12) {
-                    
                     Text("Entradas")
                         .font(.system(size: 35, weight: .bold, design: .serif))
-                        .padding(.top, 40)
-                        .padding(.bottom, 20)
+                        .padding(.top, 50)
+                        .padding(.bottom, 15)
                         .foregroundStyle(.white)
                     
                     
                     ForEach(entradas) { item in
-                        PratoCardView(prato: item)
+                        CartaoPratoView(prato: item)
                     }
                     
-                    VStack(alignment: .center, spacing: 12) {
+                    VStack(alignment: .center, spacing: 4) {
                         
                         Text("Pratos Principais")
                             .font(.system(size: 35, weight: .bold, design: .serif))
-                            .padding(.top, 40)
-                            .padding(.bottom, 20)
+                            .padding(.top, 30)
                             .foregroundStyle(.white)
                         
                         ForEach(pratosPrincipaias) { item in
-                            PratoCardView(prato: item)
+                            CartaoPratoView(prato: item)
                         }
                     }
                     
-                    VStack(alignment: .center, spacing: 12) {
+                VStack(alignment: .center, spacing: 4) {
                         
                         Text("Sobremesas")
                             .font(.system(size: 35, weight: .bold, design: .serif))
-                            .padding(.top, 40)
-                            .padding(.bottom, 20)
+                            .padding(.top, 30)
+                            .padding(.bottom, 15)
                             .foregroundStyle(.white)
                         
                         ForEach(sobremesas) { item in
-                            PratoCardView(prato: item)
+                            CartaoPratoView(prato: item)
                         }
                     }
                     
-                }
+                
                 
             }
-            .padding(28)
-            .padding(.bottom, 10)
-           
+            .padding(.top, 20)
+            
         }
         .ignoresSafeArea()
-        .background(
-            LinearGradient (
-                colors: [
-                    Color(red: 0.18, green: 0.15, blue: 0.08),
-                    Color(red: 0.81, green: 0.67, blue: 0.38),
-                    Color(red: 0.22, green: 0.25, blue: 0.40)
-                ], startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            )
-        )
+        .background(darkBlue)
     }
 }
 

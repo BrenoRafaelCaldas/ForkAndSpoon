@@ -16,8 +16,6 @@ struct PerfilView: View {
         
         NavigationStack {
             
-            
-            
             List {
                 
                 
