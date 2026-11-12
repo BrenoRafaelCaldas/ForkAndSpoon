@@ -63,26 +63,19 @@ struct CartaoPratoView: View {
             
             
             Divider()
-            
-            HStack {
-                
-                Text(prato.preco)
-                    .font(.title3.bold())
-                    .foregroundStyle(.green)
-                
-                Spacer()
                 
                 Text("Toque para ver mais")
                     .font(.caption2.bold())
                     .foregroundStyle(.tertiary)
-            }
-            .padding(.top, 17)
-            .padding(.bottom, 8)
+                    .padding(.top, 17)
+                    .padding(.bottom, 8)
+            
+            
 
         }
         .padding(20)
         .background(Color.white)
-        .cornerRadius(40)
+        .cornerRadius(45)
         .shadow(radius: 95)
         .padding(.horizontal, 22)
     }

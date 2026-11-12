@@ -129,7 +129,7 @@ struct PerfilView: View {
                         }
                         .padding(5)
                         .foregroundColor(gold)
-                        .font(.system(.body, design: .none))
+                        .font(.system(.body, design: .none).bold())
                         
                     }
                     .padding()

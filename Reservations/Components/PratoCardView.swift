@@ -40,13 +40,13 @@ struct PratoCardView: View {
             
             Text(prato.preco)
                 .font(.title3.bold())
-                .fontWeight(.semibold)
+                .foregroundStyle(.green)
                 .padding(.top, 6)
                 .padding(.bottom)
         }
         .padding(18)
         .background(Color.white)
-        .cornerRadius(50)
+        .cornerRadius(45)
         .shadow(radius: 95)
         .padding(.horizontal, 22)
         

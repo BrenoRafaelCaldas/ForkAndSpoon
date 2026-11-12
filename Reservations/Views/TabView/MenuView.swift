@@ -121,9 +121,9 @@ struct MenuView: View {
                         ForEach(sobremesas) { item in
                             CartaoPratoView(prato: item)
                         }
-                    }
-                    
-                
+                }
+                .padding(.bottom, 18)
+
                 
             }
             .padding(.top, 20)
