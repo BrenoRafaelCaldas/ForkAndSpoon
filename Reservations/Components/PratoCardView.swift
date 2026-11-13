@@ -27,7 +27,7 @@ struct PratoCardView: View {
                 .fontWeight(.semibold)
                 .multilineTextAlignment(.center)
                 .frame(width: 300)
-                .padding(.top, 10)
+                .padding(.top, 5)
             
             Divider()
             
@@ -36,13 +36,13 @@ struct PratoCardView: View {
                 .multilineTextAlignment(.center)
                 .foregroundStyle(.secondary)
                 .frame(width: 290)
-                .padding(.top, 4)
+                .padding(.top, 5)
             
             Text(prato.preco)
                 .font(.title3.bold())
                 .foregroundStyle(.green)
-                .padding(.top, 6)
-                .padding(.bottom)
+                .padding(.top, 5)
+                .padding(.bottom, 3)
         }
         .padding(18)
         .background(Color.white)
@@ -55,9 +55,10 @@ struct PratoCardView: View {
 
 #Preview {
     PratoCardView(prato: PratoItem(
-        name: "Tacos de carne",
-        imagem: "Entrada1",
-        preco: "€24,49",
-        descricao: "Lâminas finas de filé mignon, parmesão, rúcula e azeite trufado."
+        name: "Filé mignon ao molho de vinho do Porto com purê trufado",
+        imagem: "Principal2",
+        preco: "€49,99",
+        descricao: "Filé mignon grelhado ao ponto perfeito, servido com um rico molho de vinho do Porto e acompanhado de um purê de batatas.",
+        categoria: .pratosPrincipais
     ))
 }

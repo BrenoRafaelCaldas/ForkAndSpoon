@@ -14,5 +14,9 @@ struct PratoItem: Identifiable {
     let imagem : String
     let preco : String
     let descricao: String
-    
+    let categoria: CategoriaPrato
+
+    var ehComida: Bool {
+        return true
+    }
 }

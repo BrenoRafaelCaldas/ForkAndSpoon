@@ -31,7 +31,7 @@ struct CartaoPratoView: View {
         
         .onTapGesture {
             withAnimation(
-                .spring(response: 0.4,
+                .spring(response: 0.6,
                         dampingFraction: 0.75)) {
                 estaVirado.toggle()
                 }
@@ -49,16 +49,14 @@ struct CartaoPratoView: View {
                 .resizable()
                 .frame(width:320 ,height: 320, alignment: .center)
                 .clipShape(RoundedRectangle(cornerRadius: 40))
-                .padding(.bottom, 17)
-
             
             
             Text(prato.name)
-                .font(.custom("Baskerville", size: 28))
+                .font(.custom("Baskerville", size: 31))
                 .fontWeight(.semibold)
                 .multilineTextAlignment(.center)
                 .frame(width: 300)
-                .padding(.top, 20)
+                .padding(.top, 12)
                 .padding(.bottom, 17)
             
             
@@ -67,7 +65,7 @@ struct CartaoPratoView: View {
                 Text("Toque para ver mais")
                     .font(.caption2.bold())
                     .foregroundStyle(.tertiary)
-                    .padding(.top, 17)
+                    .padding(.top, 12)
                     .padding(.bottom, 8)
             
             
@@ -87,7 +85,8 @@ struct CartaoPratoView: View {
                 name: "Filé mignon ao molho de vinho do Porto com purê trufado",
                 imagem: "Principal2",
                 preco: "€49,99",
-                descricao: "Filé mignon grelhado ao ponto perfeito, servido com um rico molho de vinho do Porto e acompanhado de um purê de batatas cremoso aromatizado com trufas."
+                descricao: "Filé mignon grelhado ao ponto perfeito, servido com um rico molho de vinho do Porto e acompanhado de um purê de batatas.",
+                categoria: .pratosPrincipais
             )
         )
 }
