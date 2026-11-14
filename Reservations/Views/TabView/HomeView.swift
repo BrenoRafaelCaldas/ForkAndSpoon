@@ -15,10 +15,9 @@ struct HomeView: View {
             
             ScrollView {
                 
-                    Image("Logo")
+                    Image("LogoSplash")
                         .resizable()
-                        .frame(width:405 ,height: 370)
-                        .clipShape(RoundedRectangle(cornerRadius: 13))
+                        .frame(width: 600 ,height: 400)
                         .ignoresSafeArea()
                     
                     Text("Conheça nossas lojas")

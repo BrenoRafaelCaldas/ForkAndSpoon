@@ -14,7 +14,7 @@ struct MenuView: View {
         PratoItem(name: "Carpaccio de File Mignon",
                   imagem: "Entrada1",
                   preco: "€17,99",
-                  descricao:"Lâminas finas de filé mignon, parmesão, rúcula fresca e azeite.",
+                  descricao:"Lâminas finas de filé mignon, parmesão, rúcula fresca e azeite trufada.",
                   categoria: .entradas
                  ),
         
@@ -76,7 +76,7 @@ struct MenuView: View {
         PratoItem(name: "Pera ao Vinho",
                   imagem: "Sobremesa1",
                   preco: "€11,99",
-                  descricao:"Pera cozida em vinho tinto com especiarias, crumble crocante e creme inglês.",
+                  descricao:"Pera cozida em vinho tinto com especiarias e crumble crocante.",
                   categoria: .sobremesas
                  ),
         

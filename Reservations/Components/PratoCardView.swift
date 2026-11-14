@@ -35,6 +35,8 @@ struct PratoCardView: View {
                 .multilineTextAlignment(.center)
                 .foregroundStyle(.secondary)
                 .padding(.top, 5)
+                .lineLimit(nil)
+                .fixedSize(horizontal: false, vertical: true)
             
             Text(prato.preco)
                 .font(.title3.bold())
