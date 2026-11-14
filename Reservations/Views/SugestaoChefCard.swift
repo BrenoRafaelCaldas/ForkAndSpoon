@@ -22,15 +22,19 @@ struct SugestaoChefCard: View {
                     .padding(12) }
         }
     }
+
+    let darkBlue = Color(red: 0.1137, green: 0.1647, blue: 0.3961)
+    let gold = Color(red: 0.81, green: 0.67, blue: 0.30)
     
     private var badgeChfe: some View {
         
         HStack(spacing: 5) {
             Text("👨🏾‍🍳")
-                .font(.body.bold())
+                .font(.caption.bold())
 
             Text("SUGESTÃO DO CHEF")
-                .font(.body.bold())
+                .font(.caption)
+                .fontWeight(.bold)
                 .foregroundStyle(darkBlue)
                 .tracking(1)
             

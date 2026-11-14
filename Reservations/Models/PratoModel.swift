@@ -10,7 +10,7 @@ import SwiftUI
 enum CategoriaPrato: String, CaseIterable, Identifiable {
     
     case entradas = "Entradas"
-    case pratosPrincipais = "Pratos principais"
+    case pratosPrincipais = "Pratos Principais"
     case sobremesas = "Sobremesas"
     
     var id : String { rawValue }

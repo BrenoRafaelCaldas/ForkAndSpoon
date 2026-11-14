@@ -19,29 +19,27 @@ struct PratoCardView: View {
             
             Image(prato.imagem)
                 .resizable()
-                .frame(width:320 ,height: 320, alignment: .center)
+                .frame(width: 320, height: 320, alignment: .center)
                 .clipShape(RoundedRectangle(cornerRadius: 40))
             
             Text(prato.name)
-                .font(.custom("Baskerville", size: 25))
+                .font(.title2)
                 .fontWeight(.semibold)
                 .multilineTextAlignment(.center)
-                .frame(width: 300)
                 .padding(.top, 5)
             
             Divider()
             
             Text(prato.descricao)
-                .font(.custom("Baskerville", size: 19))
+                .font(.body)
                 .multilineTextAlignment(.center)
                 .foregroundStyle(.secondary)
-                .frame(width: 290)
                 .padding(.top, 5)
             
             Text(prato.preco)
                 .font(.title3.bold())
                 .foregroundStyle(.green)
-                .padding(.top, 5)
+                .padding(.top, 3)
                 .padding(.bottom, 3)
         }
         .padding(18)
@@ -55,7 +53,7 @@ struct PratoCardView: View {
 
 #Preview {
     PratoCardView(prato: PratoItem(
-        name: "Filé mignon ao molho de vinho do Porto com purê trufado",
+        name: "Filé mignon ao molho de vinho do Porto",
         imagem: "Principal2",
         preco: "€49,99",
         descricao: "Filé mignon grelhado ao ponto perfeito, servido com um rico molho de vinho do Porto e acompanhado de um purê de batatas.",

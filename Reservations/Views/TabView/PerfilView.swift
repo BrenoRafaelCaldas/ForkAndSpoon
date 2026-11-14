@@ -14,10 +14,10 @@ struct PerfilView: View {
     
     var body: some View {
         
+        
         NavigationStack {
             
             List {
-                
                 
                 HStack {
                     
@@ -31,8 +31,10 @@ struct PerfilView: View {
                     
                     VStack(alignment: .trailing, spacing: 18) {
                         Text("BRENO RAFAEL")
-                            .font(.system(.body, design: .rounded))
+                            .font(.title2)
+                            .fontWeight(.semibold)
                             .lineLimit(1)
+                            
                         
                         Button {
                             print("Perfil")
@@ -56,8 +58,9 @@ struct PerfilView: View {
                             .font(.system(size: 30, weight: .regular))
                         
                         Text("Reservas")
-                            .font(.system(.body, design: .none))
-                    
+                            .font(.title2)
+                            .fontWeight(.regular)
+
                     }
                     .padding()
                 }
@@ -72,7 +75,8 @@ struct PerfilView: View {
                                 .font(.system(size: 30, weight: .regular))
                             
                             Text("Avaliações")
-                                .font(.system(.body, design: .none))
+                                .font(.title2)
+                                .fontWeight(.regular)
                         }
                         .padding()
                 }
@@ -86,7 +90,8 @@ struct PerfilView: View {
                             .font(.system(size: 30, weight: .regular))
                         
                         Text("Descontos")
-                            .font(.system(.body, design: .none))
+                            .font(.title2)
+                            .fontWeight(.regular)
                     }
                     .padding()
                 }
@@ -99,7 +104,8 @@ struct PerfilView: View {
                             .font(.system(size: 30, weight: .regular))
                         
                         Text("Configurações")
-                            .font(.system(.body, design: .none))
+                            .font(.title2)
+                            .fontWeight(.regular)
                     }
                     .padding()
                 }
@@ -113,7 +119,8 @@ struct PerfilView: View {
                         
                         
                         Text("Trocar de Conta")
-                            .font(.system(.body, design: .none))
+                            .font(.title2)
+                            .fontWeight(.regular)
                     }
                     .padding()
                 }
@@ -127,23 +134,18 @@ struct PerfilView: View {
                         Button("SAIR") {
                             
                         }
+                        .font(.title2)
+                        .fontWeight(.semibold)
                         .padding(5)
                         .foregroundColor(gold)
-                        .font(.system(.body, design: .none).bold())
                         
                     }
                     .padding()
-                
-                Image("LogoPerfil")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 360, height: 220)
-                    .cornerRadius(30)
-                    .padding(.bottom, 60)
                                 
             }
-            .padding(.top, 40)
+            .padding(.top, 26)
             .ignoresSafeArea()
+            
             
         }
     }

@@ -35,14 +35,15 @@ struct LojaPorto: View {
                 
                 HStack {
                     Text("MATOSINHOS")
-                        .font(.footnote.italic())
+                        .font(.caption.italic())
                         .padding(.horizontal)
                     
                     Spacer()
                     
                     Button{ showReservationPorto = true
                     }  label: { Text("Reserve Agora")
-                            .font(.headline.bold())
+                            .font(.headline)
+                            .fontWeight(.semibold)
                             .foregroundStyle(gold)
                             .padding(.horizontal)
                     }

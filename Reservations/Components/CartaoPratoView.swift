@@ -23,22 +23,17 @@ struct CartaoPratoView: View {
                 .opacity(estaVirado ? 1 : 0)
                 .rotation3DEffect(.degrees(180),
                                   axis: (x: 0, y: 1, z: 0))
-            
         }
         .rotation3DEffect(.degrees(estaVirado ? 180 : 0),
                           axis: (x: 0.0, y: 1.0, z: 0.0)
         )
-        
         .onTapGesture {
             withAnimation(
                 .spring(response: 0.6,
                         dampingFraction: 0.75)) {
                 estaVirado.toggle()
                 }
-            
         }
-        
-   
     }
     
     private var versoCartao: some View {
@@ -52,23 +47,20 @@ struct CartaoPratoView: View {
             
             
             Text(prato.name)
-                .font(.custom("Baskerville", size: 31))
+                .font(.title)
                 .fontWeight(.semibold)
                 .multilineTextAlignment(.center)
-                .frame(width: 300)
                 .padding(.top, 12)
-                .padding(.bottom, 17)
+                .padding(.bottom, 12)
             
             
             Divider()
                 
                 Text("Toque para ver mais")
-                    .font(.caption2.bold())
+                    .font(.caption.bold())
                     .foregroundStyle(.tertiary)
-                    .padding(.top, 12)
-                    .padding(.bottom, 8)
-            
-            
+                    .padding(.top, 10)
+                    .padding(.bottom, 10)
 
         }
         .padding(20)
@@ -82,7 +74,7 @@ struct CartaoPratoView: View {
 #Preview {
         CartaoPratoView(
             prato: PratoItem(
-                name: "Filé mignon ao molho de vinho do Porto com purê trufado",
+                name: "Filé mignon ao molho de vinho do Porto",
                 imagem: "Principal2",
                 preco: "€49,99",
                 descricao: "Filé mignon grelhado ao ponto perfeito, servido com um rico molho de vinho do Porto e acompanhado de um purê de batatas.",

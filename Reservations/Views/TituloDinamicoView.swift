@@ -18,10 +18,10 @@ struct TituloDinamicoView: View {
         
         HStack {
             Text(categoria.rawValue.uppercased())
-                .font(.system(size: 34, weight: .black, design: .rounded))
+                .font(.system(size: 30, weight: .black, design: .rounded))
                 .foregroundStyle(
                     LinearGradient(
-                        colors: [gold, gold.opacity(0.6)],
+                        colors: [gold, gold.opacity(0.5)],
                                    startPoint: .topLeading,
                                    endPoint: .bottomTrailing
                                   )
@@ -29,12 +29,14 @@ struct TituloDinamicoView: View {
                 .tracking(2)
                 .id(categoria)
                 .transition(
-                    .asymmetric(insertion: .opacity.combined(with: .move(edge:                  .top)),
-                                removal: .opacity.combined(with: .move(edge: .bottom))
+                    .asymmetric(
+                        insertion: .opacity.combined(
+                            with: .move(edge: .top)),
+                            removal: .opacity.combined(
+                            with: .move(edge: .bottom))
                 )
             
             )
-            Spacer()
         }
         .padding(.horizontal, 20)
         .padding(.top, 20)
@@ -47,7 +49,7 @@ struct TituloDinamicoView: View {
     ZStack {
         Color(.systemGroupedBackground).ignoresSafeArea()
         VStack {
-            TituloDinamicoView(categoria: .entradas)
+            TituloDinamicoView(categoria: .pratosPrincipais)
             Spacer()
         }
     }

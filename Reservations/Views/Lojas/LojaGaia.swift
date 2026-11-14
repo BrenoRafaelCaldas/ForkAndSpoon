@@ -32,14 +32,15 @@ struct LojaGaia: View {
                 
                 HStack {
                     Text("VILA NOVA DE GAIA")
-                        .font(.footnote.italic())
+                        .font(.caption.italic())
                         .padding(.horizontal)
                     
                     Spacer()
                     
                     Button{ showReservationGaia = true
                     }  label: { Text("Reserve Agora")
-                            .font(.headline.bold())
+                            .font(.headline)
+                            .fontWeight(.semibold)
                             .foregroundStyle(gold)
                             .padding(.horizontal)
                         

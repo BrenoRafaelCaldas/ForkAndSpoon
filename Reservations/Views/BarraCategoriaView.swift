@@ -24,8 +24,8 @@ struct BarraCategoriaView: View {
                     botaoCategoria(categoria)
                 }
             }
-            .padding(.horizontal, 12)
-            .padding(.vertical, 8)
+            .padding(.horizontal, 7)
+            .padding(.vertical, 7)
         }
         .background(.ultraThinMaterial)
         .clipShape(Capsule())
@@ -33,9 +33,9 @@ struct BarraCategoriaView: View {
         
         .overlay(
             Capsule()
-                .stroke(Color.white.opacity(0.25), lineWidth: 0.5)
+                .stroke(Color.white.opacity(0.25), lineWidth: 0.9)
             )
-        .shadow(color: .black.opacity(0.08), radius: 10, x: 0, y: 5)
+        .shadow(color: .black.opacity(0.10), radius: 10, x: 0, y: 5)
         .padding(.horizontal, 16)
     }
     
