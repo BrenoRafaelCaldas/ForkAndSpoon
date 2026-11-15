@@ -15,7 +15,7 @@ struct MenuView: View {
                   imagem: "Carpaccio",
                   preco: "€17,99",
                   descricao:"Lâminas finas de filé mignon, parmesão, rúcula fresca e azeite trufada.",
-                  categoria: .entradas
+                  categoria: .entradas,
                  ),
         
         PratoItem(name: "Tartar de Salmão",
@@ -167,11 +167,12 @@ struct MenuView: View {
                   categoria: .sobremesas
                  ),
         
-        PratoItem(name: "Cocktail Botanico",
+        PratoItem(name: "Cocktail Botânico",
                   imagem: "Botanico",
                   preco: "€14,49",
                   descricao: "Gin botânico com infusão de zimbro, xarope artesanal de alecrim e água tônica premium.",
-                  categoria: .sobremesas
+                  categoria: .sobremesas,
+                  isSemAlcool: true
                  )
     ]
         
@@ -228,6 +229,7 @@ struct MenuView: View {
                                     VStack(spacing: 12) {
                                         ForEach(bebidas) { item in
                                             CartaoPratoView(prato: item)
+                                            
                                         }
                                     }
                                 }

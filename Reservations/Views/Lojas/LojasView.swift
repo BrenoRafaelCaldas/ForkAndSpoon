@@ -43,6 +43,7 @@ struct LojasView: View {
 
         }
         .padding(.top, 7)
+        .padding(.bottom, 90)
 
     }
 }
