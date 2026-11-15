@@ -59,7 +59,7 @@ struct SugestaoChefCard: View {
         SugestaoChefCard(
             prato: PratoItem(
                 name: "Filé mignon ao molho de vinho do Porto com purê trufado",
-                imagem: "Principal2",
+                imagem: "Brulee",
                 preco: "€49,99",
                 descricao: "Filé mignon grelhado ao ponto perfeito, servido com um rico molho de vinho do Porto e acompanhado de um purê de batatas.",
                 categoria: .pratosPrincipais

@@ -37,9 +37,11 @@ struct BarraCategoriaView: View {
             )
         .shadow(color: .black.opacity(0.10), radius: 10, x: 0, y: 5)
         .padding(.horizontal, 16)
+        .padding(.bottom, 10)
     }
     
     @ViewBuilder
+    
     private func botaoCategoria(_ categoria: CategoriaPrato) -> some View {
         let estaSelecionado = (categoriaSelecionada == categoria)
         

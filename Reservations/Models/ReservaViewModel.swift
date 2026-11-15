@@ -22,7 +22,6 @@ class ReservasViewModel: ObservableObject {
             return reservas.filter { $0.status == "Concluída" }
         case .canceladas:
             return reservas.filter { $0.status == "Cancelada" }
-            
         }
     }
     

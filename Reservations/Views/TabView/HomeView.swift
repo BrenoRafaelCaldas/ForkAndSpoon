@@ -11,60 +11,23 @@ struct HomeView: View {
     
     var body: some View {
 
-        NavigationView {
-            
-            ScrollView {
+        VStack{
+                Image("LogoSplash")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 400, height: 380)
                 
-                    Image("LogoSplash")
-                        .resizable()
-                        .frame(width: 600 ,height: 400)
-                        .ignoresSafeArea()
-                    
-                    Text("Conheça nossas lojas")
-                        .font(.body)
-                        .fontWeight(.semibold)
-                        .padding(5)
-                    
-                    Divider()
-                        .frame(height: 1)
-                        .background(Color(.black))
-                    
-                    LojaPorto()
-                        .frame(width: 390, height: 95)
-                        .cornerRadius(10)
-                        .shadow(radius: 10)
-                    
-                    
-                    Divider()
-                        .frame(height: 1)
-                        .background(Color(.black))
-                    
-                    LojaGaia()
-                        .frame(width: 390, height: 95)
-                        .cornerRadius(10)
-                        .shadow(radius: 10)
-                        .padding(5)
-                    
-                    Divider()
-                        .frame(height: 1)
-                        .background(Color(.black))
-                    
-                    LojaPortoCentro()
-                        .frame(width: 390, height: 95)
-                        .cornerRadius(10)
-                        .shadow(radius: 10)
-                        .padding(5)
-                    
-                    Divider()
-                        .frame(height: 1)
-                        .background(Color(.black))
-                
-            }
-            .ignoresSafeArea()
-            .padding(.bottom)
+                Text("Conheça nossas lojas")
+                    .font(.body)
+                    .fontWeight(.semibold)
+                    .foregroundStyle(.secondary)
             
+                Divider()
             
+                LojasView()
         }
+        .ignoresSafeArea()
+                
                
     }
 }

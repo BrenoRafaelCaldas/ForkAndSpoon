@@ -12,6 +12,7 @@ enum CategoriaPrato: String, CaseIterable, Identifiable {
     case entradas = "Entradas"
     case pratosPrincipais = "Pratos Principais"
     case sobremesas = "Sobremesas"
+    case bebidas = "Bebidas"
     
     var id : String { rawValue }
 }
