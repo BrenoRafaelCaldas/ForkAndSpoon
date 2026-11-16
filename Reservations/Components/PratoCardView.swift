@@ -45,7 +45,7 @@ struct PratoCardView: View {
                 .padding(.bottom, 3)
         }
         .padding(18)
-        .background(.ultraThickMaterial)
+        .background(Color(.secondarySystemBackground))
         .cornerRadius(45)
         .shadow(radius: 95)
         .padding(.horizontal, 22)

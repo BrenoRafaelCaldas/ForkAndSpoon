@@ -9,6 +9,16 @@ import SwiftUI
 
 struct CartaoPratoView: View {
     
+    @Environment(\.colorScheme) var colorScheme
+    
+    var corTextoTitulo: Color {
+        colorScheme == .dark ? .white : darkBlue
+    }
+    
+    var corFundoCartao: Color {
+        Color(uiColor: .secondarySystemGroupedBackground)
+    }
+    
     let prato: PratoItem
     
     @State private var estaVirado = true
@@ -38,8 +48,7 @@ struct CartaoPratoView: View {
                 }
             }
         }
-        
-        
+        .compositingGroup()
         .rotation3DEffect(.degrees(estaVirado ? 180 : 0),
                           axis: (x: 0.0, y: 1.0, z: 0.0)
         )
@@ -61,13 +70,13 @@ struct CartaoPratoView: View {
             Text("SUGESTÃO DO CHEF")
                 .font(.caption)
                 .fontWeight(.bold)
-                .foregroundStyle(.secondary)
+                .foregroundStyle(corTextoTitulo)
                 .tracking(1)
             
         }
         .padding(.horizontal, 9)
         .padding(.vertical, 8)
-        .background(.ultraThinMaterial)
+        .background(.ultraThickMaterial)
         .clipShape(Capsule())
         .overlay(
             Capsule()
@@ -92,7 +101,6 @@ struct CartaoPratoView: View {
         }
         .padding(.horizontal, 9)
         .padding(.vertical, 8)
-        .background(.ultraThinMaterial)
         .clipShape(Capsule())
         .overlay(
             Capsule()
@@ -115,6 +123,7 @@ struct CartaoPratoView: View {
             Text(prato.name)
                 .font(.title)
                 .fontWeight(.semibold)
+                .foregroundStyle(Color.primary)
                 .multilineTextAlignment(.center)
                 .padding(.top, 12)
                 .padding(.bottom, 12)
@@ -130,9 +139,9 @@ struct CartaoPratoView: View {
 
         }
         .padding(20)
-        .background(.ultraThickMaterial)
+        .background(Color(.secondarySystemBackground))
         .cornerRadius(45)
-        .shadow(radius: 95)
+        .shadow(radius: 10)
         .padding(.horizontal, 22)
     }
 }
