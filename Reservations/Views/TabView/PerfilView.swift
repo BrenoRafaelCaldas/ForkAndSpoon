@@ -144,6 +144,7 @@ struct PerfilView: View {
                                 
             }
             .padding(.top, 26)
+            .padding(.bottom, 90)
             .ignoresSafeArea()
             
             

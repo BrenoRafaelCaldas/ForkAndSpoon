@@ -45,7 +45,7 @@ struct PratoCardView: View {
                 .padding(.bottom, 3)
         }
         .padding(18)
-        .background(Color.white)
+        .background(.ultraThickMaterial)
         .cornerRadius(45)
         .shadow(radius: 95)
         .padding(.horizontal, 22)
@@ -56,7 +56,7 @@ struct PratoCardView: View {
 #Preview {
     PratoCardView(prato: PratoItem(
         name: "Filé mignon ao molho de vinho do Porto",
-        imagem: "Principal2",
+        imagem: "Brulee",
         preco: "€49,99",
         descricao: "Filé mignon grelhado ao ponto perfeito, servido com um rico molho de vinho do Porto e acompanhado de um purê de batatas.",
         categoria: .pratosPrincipais

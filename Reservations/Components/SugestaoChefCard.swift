@@ -45,7 +45,7 @@ struct SugestaoChefCard: View {
             Text("SUGESTÃO DO CHEF")
                 .font(.caption)
                 .fontWeight(.bold)
-                .foregroundStyle(darkBlue)
+                .foregroundStyle(.secondary)
                 .tracking(1)
             
         }
@@ -70,7 +70,7 @@ struct SugestaoChefCard: View {
             Text("SEM ÁLCOOL")
                 .font(.caption)
                 .fontWeight(.bold)
-                .foregroundStyle(darkBlue)
+                .foregroundStyle(.secondary)
                 .tracking(1)
         
         }
@@ -101,7 +101,7 @@ struct SugestaoChefCard: View {
                 preco: "€49,99",
                 descricao: "Filé mignon grelhado ao ponto perfeito, servido com um rico molho de vinho do Porto e acompanhado de um purê de batatas.",
                 categoria: .pratosPrincipais,
-                isSemAlcool: true
+                isRecomendacaoChefe: true
             )
         )
     }

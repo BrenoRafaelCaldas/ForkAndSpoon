@@ -61,7 +61,7 @@ struct CartaoPratoView: View {
             Text("SUGESTÃO DO CHEF")
                 .font(.caption)
                 .fontWeight(.bold)
-                .foregroundStyle(darkBlue)
+                .foregroundStyle(.secondary)
                 .tracking(1)
             
         }
@@ -86,7 +86,7 @@ struct CartaoPratoView: View {
             Text("SEM ÁLCOOL")
                 .font(.caption)
                 .fontWeight(.bold)
-                .foregroundStyle(darkBlue)
+                .foregroundStyle(.secondary)
                 .tracking(1)
         
         }
@@ -130,7 +130,7 @@ struct CartaoPratoView: View {
 
         }
         .padding(20)
-        .background(Color.white)
+        .background(.ultraThickMaterial)
         .cornerRadius(45)
         .shadow(radius: 95)
         .padding(.horizontal, 22)
