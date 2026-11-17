@@ -35,19 +35,6 @@ struct CartaoPratoView: View {
                 .rotation3DEffect(.degrees(180),
                                   axis: (x: 0, y: 1, z: 0))
         }
-        .overlay(alignment: .topLeading) {
-            if !estaVirado {
-                if prato.isRecomendacaoChefe {
-                    badgeChfe
-                        .padding(25)
-                        .padding(.leading, 18)
-                } else if prato.isSemAlcool {
-                    badgeSemAcool
-                        .padding(25)
-                        .padding(.leading, 18)
-                }
-            }
-        }
         .compositingGroup()
         .rotation3DEffect(.degrees(estaVirado ? 180 : 0),
                           axis: (x: 0.0, y: 1.0, z: 0.0)
@@ -84,31 +71,6 @@ struct CartaoPratoView: View {
         )
         .shadow(color: .black.opacity(0.4), radius: 4, x: 0, y: 2)
         .padding(11)
-    }
-
-    private var badgeSemAcool: some View {
-    
-        HStack(spacing: 5) {
-            Text("0%")
-                .font(.caption.bold())
-                .foregroundStyle(corTextoTitulo)
-
-
-            Text("ÁLCOOL")
-                .font(.caption.bold())
-                .foregroundStyle(corTextoTitulo)
-                .tracking(1)
-        
-        }
-        .padding(.horizontal, 10)
-        .padding(.vertical, 10)
-        .clipShape(Capsule())
-        .overlay(
-            Capsule()
-                .stroke(gold, lineWidth: 0.8)
-        )
-        .shadow(color: .black.opacity(0.4), radius: 4, x: 0, y: 2)
-        .padding(.leading, 200)
     }
     
     private var versoCartao: some View {
@@ -154,8 +116,7 @@ struct CartaoPratoView: View {
                 imagem: "Botanico",
                 preco: "€49,99",
                 descricao: "Filé mignon grelhado ao ponto perfeito, servido com um rico molho de vinho do Porto e acompanhado de um purê de batatas.",
-                categoria: .pratosPrincipais,
-                isSemAlcool: true
+                categoria: .pratosPrincipais
             )
         )
 }

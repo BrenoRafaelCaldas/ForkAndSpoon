@@ -23,7 +23,7 @@ struct LojaCardView: View {
                 .resizable()
                 .scaledToFit()
                 .frame(width: 50, height: 50)
-                .foregroundStyle(darkBlue)
+                .foregroundStyle(.primary)
             
             
             VStack (alignment: .listRowSeparatorLeading, spacing: 6) {

@@ -12,7 +12,7 @@ struct HomeView: View {
     var body: some View {
 
         VStack{
-                Image("LogoSplash")
+                Image("Logo")
                     .resizable()
                     .scaledToFill()
                     .frame(width: 400, height: 380)

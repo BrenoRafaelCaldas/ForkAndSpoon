@@ -19,13 +19,7 @@ struct TituloDinamicoView: View {
         HStack {
             Text(categoria.rawValue.uppercased())
                 .font(.system(size: 30, weight: .black, design: .rounded))
-                .foregroundStyle(
-                    LinearGradient(
-                        colors: [gold, gold.opacity(0.5)],
-                                   startPoint: .topLeading,
-                                   endPoint: .bottomTrailing
-                                  )
-                )
+                .foregroundStyle(.primary)
                 .tracking(2)
                 .id(categoria)
                 .transition(

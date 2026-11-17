@@ -7,19 +7,19 @@
 
 import SwiftUI
 
-struct TrocarContaView: View {
+struct helpView: View {
     
     var body: some View {
         
         List {
-            Image(systemName: "person.crop.badge.magnifyingglass.fill")
+            Image(systemName: "info.circle.fill")
                 .resizable()
                 .scaledToFit()
                 .frame(width: 200, height: 200)
                 .padding(.bottom)
             
-            Text("TROCAR DE CONTA")
-                .font(.largeTitle.bold())
+            Text("AJUDA E ATENDIMENTO")
+                .font(.title.bold())
                 .lineLimit(1)
         }
     }
@@ -28,5 +28,5 @@ struct TrocarContaView: View {
 }
 
 #Preview {
-    TrocarContaView()
+    helpView()
 }

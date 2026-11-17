@@ -27,6 +27,8 @@ struct PerfilView: View {
                         .scaledToFill()
                         .frame(width: 100, height: 100)
                         .cornerRadius(70)
+                        .shadow(color: .primary.opacity(0.30), radius: 20)
+
                     
                     Spacer()
                                         
@@ -36,7 +38,7 @@ struct PerfilView: View {
                             .fontWeight(.semibold)
                             .lineLimit(1)
                         
-                        Text("Membro Vip ‧ Club Fork & Spoon ")
+                        Text("Membro Vip - Club Fork & Spoon ")
                             .font(.caption.smallCaps())
                             .fontWeight(.semibold)
                             .foregroundStyle(gold)
@@ -44,7 +46,7 @@ struct PerfilView: View {
                             .padding(.bottom, 8)
                         
                         Button {
-                            
+                            print("Editar Perfil")
                         } label: {
                             Text("Editar Perfil")
                                 .font(.headline)
@@ -57,7 +59,6 @@ struct PerfilView: View {
                                     
                                 )
                         }
-
                         
                     }
                 }
@@ -124,7 +125,7 @@ struct PerfilView: View {
                     .lineLimit(1)
                     .padding(.top, 10)
                    
-                NavigationLink(destination: DescontosView()) {
+                NavigationLink(destination: preferenceView()) {
                     HStack {
                     
                         Image(systemName: "fork.knife.circle.fill")
@@ -174,7 +175,7 @@ struct PerfilView: View {
                     .lineLimit(1)
                     .padding(.top,10)
                 
-                NavigationLink(destination: TrocarContaView()){
+                NavigationLink(destination: helpView()){
                     
                     HStack {
                     
@@ -199,14 +200,14 @@ struct PerfilView: View {
                     HStack {
                         Image(systemName: "rectangle.portrait.and.arrow.right")
                             .symbolRenderingMode(.monochrome)
-                            .foregroundColor(.red)
-                            .font(.system(size: 30))
+                            .foregroundColor(.primary)
+                            .font(.system(size: 35))
                         
                         Button("Sair da conta") {
-                            
+                            print("Sair da Conta")
+
                         }
                         .font(.headline)
-                        .padding(5)
                         .foregroundColor(.red)
                         
                     }
@@ -222,6 +223,8 @@ struct PerfilView: View {
         
     }
 }
+
+
 
 #Preview {
     PerfilView()

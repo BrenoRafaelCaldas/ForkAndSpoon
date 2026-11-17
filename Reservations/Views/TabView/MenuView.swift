@@ -183,10 +183,6 @@ struct MenuView: View {
     
     var body: some View {
     
-            darkBlue
-                .ignoresSafeArea()
-                .overlay {
-    
                     ScrollViewReader { proxy in
                         
                         ScrollView(.vertical, showsIndicators: false) {
@@ -246,10 +242,8 @@ struct MenuView: View {
                                 }
                             )
                             .padding(.top, 8)
-                            .background(darkBlue.opacity(0.95))
                         }
                     }
-                }
     }
 }
 

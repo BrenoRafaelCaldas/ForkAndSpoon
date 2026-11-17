@@ -7,24 +7,24 @@
 
 import SwiftUI
 
-struct DescontosView: View {
+struct preferenceView: View {
     var body: some View {
         
         
         List {
             
-            Image(systemName: "dollarsign.circle.fill", variableValue: 1.00)
+            Image(systemName: "fork.knife.circle.fill")
                 .resizable()
                 .scaledToFit()
                 .frame(width: 200, height: 200)
                 .padding(.bottom)
             
-            Text("CLUBE FORK & SPOON PAGE")
+            Text("PREFERENCE PAGE")
                 .font(.title.bold())
         }
     }
 }
 
 #Preview {
-    DescontosView()
+    preferenceView()
 }

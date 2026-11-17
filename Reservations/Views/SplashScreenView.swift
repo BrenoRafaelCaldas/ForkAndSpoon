@@ -15,13 +15,13 @@ struct SplashScreenView: View {
         
         ZStack {
             
-            Color("blueLogo")
+            Color(.black)
                 .ignoresSafeArea()
             
             Image("LogoSplash")
                 .resizable()
                 .scaledToFill()
-                .frame(height: 530)
+
         }
     }
 }
