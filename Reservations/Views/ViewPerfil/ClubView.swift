@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AvaliacoesView: View {
+struct clubView: View {
     var body: some View {
         
         List {
@@ -18,7 +18,7 @@ struct AvaliacoesView: View {
                 .frame(width: 200, height: 200)
                 .padding(.bottom)
             
-            Text("AVALIACÕES PAGE")
+            Text("CLUBE F&S PAGE")
                 .font(.largeTitle.bold())
                 .lineLimit(1)
         }
@@ -26,5 +26,5 @@ struct AvaliacoesView: View {
 }
 
 #Preview {
-    AvaliacoesView()
+    clubView()
 }

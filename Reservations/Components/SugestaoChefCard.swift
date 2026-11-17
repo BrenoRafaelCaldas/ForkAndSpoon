@@ -63,20 +63,18 @@ struct SugestaoChefCard: View {
 
     private var badgeSemAcool: some View {
     
-        HStack(spacing: 5) {
+        HStack(spacing: 6) {
             Text("0%")
                 .font(.caption.bold())
 
-            Text("SEM ÁLCOOL")
-                .font(.caption)
-                .fontWeight(.bold)
-                .foregroundStyle(.secondary)
+            Text("ÁLCOOL")
+                .font(.caption.bold())
                 .tracking(1)
         
         }
-        .padding(.horizontal, 9)
+        .padding(.horizontal, 11)
         .padding(.vertical, 8)
-        .background(.ultraThinMaterial)
+        .background(.ultraThickMaterial)
         .clipShape(Capsule())
         .overlay(
             Capsule()
@@ -101,7 +99,7 @@ struct SugestaoChefCard: View {
                 preco: "€49,99",
                 descricao: "Filé mignon grelhado ao ponto perfeito, servido com um rico molho de vinho do Porto e acompanhado de um purê de batatas.",
                 categoria: .pratosPrincipais,
-                isRecomendacaoChefe: true
+                isSemAlcool: true
             )
         )
     }

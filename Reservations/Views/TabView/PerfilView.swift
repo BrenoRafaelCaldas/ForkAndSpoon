@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import PhotosUI
 
 struct PerfilView: View {
         
@@ -25,28 +26,49 @@ struct PerfilView: View {
                         .resizable()
                         .scaledToFill()
                         .frame(width: 100, height: 100)
-                        .cornerRadius(50)
+                        .cornerRadius(70)
                     
                     Spacer()
-                    
-                    VStack(alignment: .trailing, spacing: 18) {
+                                        
+                    VStack(alignment: .center) {
                         Text("BRENO RAFAEL")
                             .font(.title2)
                             .fontWeight(.semibold)
                             .lineLimit(1)
-                            
+                        
+                        Text("Membro Vip ‧ Club Fork & Spoon ")
+                            .font(.caption.smallCaps())
+                            .fontWeight(.semibold)
+                            .foregroundStyle(gold)
+                            .lineLimit(1)
+                            .padding(.bottom, 8)
                         
                         Button {
-                            print("Perfil")
+                            
                         } label: {
                             Text("Editar Perfil")
                                 .font(.headline)
-                                .foregroundStyle(gold)
+                                .padding(.horizontal, 15)
+                                .padding(.vertical, 5)
+                                .foregroundStyle(.secondary)
+                                .overlay(
+                                    Capsule()
+                                        .stroke(.secondary, lineWidth: 0.8)
+                                    
+                                )
                         }
+
                         
                     }
                 }
-                .padding(10)
+                    Text("Suas Experiências")
+                        .font(.headline.smallCaps())
+                        .fontWeight(.semibold)
+                        .foregroundStyle(gold)
+                        .lineLimit(1)
+                        .padding(.top, 10)
+
+                
                 
                 NavigationLink(destination: ReservasView()){
                     
@@ -54,101 +76,150 @@ struct PerfilView: View {
                     
                         Image(systemName: "calendar.circle.fill")
                             .symbolRenderingMode(.monochrome)
-                            .foregroundColor(darkBlue)
-                            .font(.system(size: 30, weight: .regular))
+                            .font(.system(size: 35, weight: .regular))
                         
-                        Text("Reservas")
-                            .font(.title2)
-                            .fontWeight(.regular)
-
+                        VStack(alignment: .leading){
+                            
+                            Text("Reservas")
+                                .font(.headline)
+                                .fontWeight(.regular)
+                            
+                            Text("Historico e ativas")
+                                .font(.caption.smallCaps())
+                                .foregroundStyle(.secondary)
+                                .lineLimit(1)
+                        }
                     }
-                    .padding()
                 }
                 
-                NavigationLink(destination: AvaliacoesView()) {
+                
+                
+                NavigationLink(destination: clubView()) {
                         
-                        HStack {
+                    HStack {
+                    
+                        Image(systemName: "coloncurrencysign.circle.fill")
+                            .symbolRenderingMode(.monochrome)
+                            .font(.system(size: 35, weight: .regular))
                         
-                            Image(systemName: "star.circle.fill")
-                                .symbolRenderingMode(.monochrome)
-                                .foregroundColor(darkBlue)
-                                .font(.system(size: 30, weight: .regular))
+                        VStack(alignment: .leading){
                             
-                            Text("Avaliações")
-                                .font(.title2)
+                            Text("Club Fork & Spoon")
+                                .font(.headline)
                                 .fontWeight(.regular)
+                            
+                            Text("Seus Benficios e pontos")
+                                .font(.caption.smallCaps())
+                                .foregroundStyle(.secondary)
+                                .lineLimit(1)
                         }
-                        .padding()
+                    }
                 }
+                
+                
+                Text("Preferências & Conta")
+                    .font(.headline.smallCaps())
+                    .fontWeight(.semibold)
+                    .foregroundStyle(gold)
+                    .lineLimit(1)
+                    .padding(.top, 10)
                    
                 NavigationLink(destination: DescontosView()) {
                     HStack {
-                        
-                        Image(systemName: "dollarsign.circle.fill")
+                    
+                        Image(systemName: "fork.knife.circle.fill")
                             .symbolRenderingMode(.monochrome)
-                            .foregroundColor(darkBlue)
-                            .font(.system(size: 30, weight: .regular))
+                            .font(.system(size: 35, weight: .regular))
                         
-                        Text("Descontos")
-                            .font(.title2)
-                            .fontWeight(.regular)
+                        VStack(alignment: .leading){
+                            
+                            Text("Preferências Gastronômicas")
+                                .font(.headline)
+                                .fontWeight(.regular)
+                            
+                            Text("Restrições e preferências")
+                                .font(.caption.smallCaps())
+                                .foregroundStyle(.secondary)
+                                .lineLimit(1)
+                        }
                     }
-                    .padding()
                 }
                 
                 NavigationLink(destination: ConfiguracoesView()){
+                    
                     HStack {
-                        Image(systemName: "gearshape.circle.fill")
+                    
+                        Image(systemName: "gear.circle.fill")
                             .symbolRenderingMode(.monochrome)
-                            .foregroundColor(darkBlue)
-                            .font(.system(size: 30, weight: .regular))
+                            .font(.system(size: 35, weight: .regular))
                         
-                        Text("Configurações")
-                            .font(.title2)
-                            .fontWeight(.regular)
+                        VStack(alignment: .leading){
+                            
+                            Text("Configurações")
+                                .font(.headline)
+                                .fontWeight(.regular)
+                            
+                            Text("Notificações, idioma e tema")
+                                .font(.caption.smallCaps())
+                                .foregroundStyle(.secondary)
+                                .lineLimit(1)
+                        }
                     }
-                    .padding()
                 }
                 
+                Text("Sobre e Suporte")
+                    .font(.headline.smallCaps())
+                    .fontWeight(.semibold)
+                    .foregroundStyle(gold)
+                    .lineLimit(1)
+                    .padding(.top,10)
+                
                 NavigationLink(destination: TrocarContaView()){
+                    
                     HStack {
-                        Image(systemName: "person.crop.badge.magnifyingglass.fill")
+                    
+                        Image(systemName: "info.circle.fill")
                             .symbolRenderingMode(.monochrome)
-                            .foregroundColor(darkBlue)
-                            .font(.system(size: 30, weight: .regular))
+                            .font(.system(size: 35, weight: .regular))
                         
-                        
-                        Text("Trocar de Conta")
-                            .font(.title2)
-                            .fontWeight(.regular)
+                        VStack(alignment: .leading){
+                            
+                            Text("Ajuda e Atendimento")
+                                .font(.headline)
+                                .fontWeight(.regular)
+                            
+                            Text("Dúvidas, suporte e contato")
+                                .font(.caption.smallCaps())
+                                .foregroundStyle(.secondary)
+                                .lineLimit(1)
+                        }
                     }
-                    .padding()
                 }
                     
                     HStack {
-                        Image(systemName: "pip.exit")
+                        Image(systemName: "rectangle.portrait.and.arrow.right")
                             .symbolRenderingMode(.monochrome)
-                            .foregroundColor(darkBlue)
+                            .foregroundColor(.red)
                             .font(.system(size: 30))
                         
-                        Button("SAIR") {
+                        Button("Sair da conta") {
                             
                         }
-                        .font(.title2)
-                        .fontWeight(.semibold)
+                        .font(.headline)
                         .padding(5)
-                        .foregroundColor(gold)
+                        .foregroundColor(.red)
                         
                     }
-                    .padding()
                                 
             }
-            .padding(.top, 26)
+            .padding(.top, 60)
             .padding(.bottom, 90)
             .ignoresSafeArea()
+            .listStyle(.plain)
             
             
         }
+        
     }
 }
 

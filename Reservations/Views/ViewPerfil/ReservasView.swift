@@ -22,6 +22,8 @@ struct ReservasView: View {
             
             headView
             
+            Divider()
+            
             pickerAbaView
             
             ScrollView {
@@ -40,28 +42,29 @@ struct ReservasView: View {
             }
             
         }
-        .background(darkBlue.opacity(0.95).ignoresSafeArea())
         
     }
     
     private var headView: some View {
-        VStack(alignment: .leading ,spacing: 16) {
+        
+        VStack(alignment: .leading) {
             
             
             Text("Reservas")
                 .font(.largeTitle.bold())
-                .foregroundStyle(.white)
+                .foregroundStyle(.primary)
             
             Text("Suas Experiencias Gastronômicas Salvas")
                 .font(.subheadline.bold())
-                .foregroundStyle(gold)
+                .foregroundStyle(.secondary)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(16)
-        .background(darkBlue)
+        .background(.secondary.opacity(0.1))
         
         
     }
+    
     
     private var pickerAbaView: some View {
         
@@ -85,7 +88,7 @@ struct ReservasView: View {
             
             Text("Nenhuma Reserva Nesta Categoria")
                 .font(.headline)
-                .foregroundStyle(.white)
+                .foregroundStyle(.primary)
         }
         .padding(.top, 40)
     }
@@ -99,15 +102,15 @@ struct ReservasView: View {
             VStack(alignment: .leading, spacing: 10){
                 Text(reserva.restaurante)
                     .font(.headline.bold())
-                    .foregroundStyle(.white)
+                    .foregroundStyle(.primary)
                 
                 Text(reserva.datahora.formatted())
-                    .font(.subheadline.bold())
-                    .foregroundStyle(.gray.opacity(0.7))
+                    .font(.caption.bold())
+                    .foregroundStyle(.primary.opacity(0.5))
                 
                 Text("Mesa para \(reserva.numeroPessoas) pessoas")
                     .font(.caption.bold())
-                    .foregroundStyle(.gray)
+                    .foregroundStyle(.primary)
             }
             Spacer()
             
@@ -121,20 +124,20 @@ struct ReservasView: View {
 
         }
         .padding()
-        .background(Color.white.opacity(0.08))
+        .background(Color.primary.opacity(0.1))
         .cornerRadius(14)
     }
     
     private func corDoStatus(_ status : String) -> Color {
         switch status {
         case "Confirmada":
-            return .green
+            return .accentColor.opacity(0.9)
         case "Cancelada":
             return .red.opacity(0.8)
         case "Concluído":
-            return .blue
-        default:
             return .gray
+        default:
+            return .secondary.opacity(0.54)
         }
     }
 

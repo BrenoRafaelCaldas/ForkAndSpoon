@@ -44,7 +44,27 @@ class ReservasViewModel: ObservableObject {
             ReservaModel(restaurante: "F&S - Porto Centro",
                          datahora: Date().addingTimeInterval(86400),
                          numeroPessoas: 8,
-                         status: "Cancelada")
+                         status: "Cancelada"),
+            
+            ReservaModel(restaurante: "F&S - Algarve",
+                         datahora: Date().addingTimeInterval(86400),
+                         numeroPessoas: 2,
+                         status: "Confirmada"),
+            
+            ReservaModel(restaurante: "F&S - Server do Vouga",
+                         datahora: Date().addingTimeInterval(86400),
+                         numeroPessoas: 10,
+                         status: "Concluída"),
+            
+            ReservaModel(restaurante: "F&S - Algarve",
+                         datahora: Date().addingTimeInterval(86400),
+                         numeroPessoas: 8,
+                         status: "Confirmada"),
+            
+            ReservaModel(restaurante: "F&S - Server do Vouga",
+                         datahora: Date().addingTimeInterval(86400),
+                         numeroPessoas: 5,
+                         status: "Confirmada")
         ]
     }
     

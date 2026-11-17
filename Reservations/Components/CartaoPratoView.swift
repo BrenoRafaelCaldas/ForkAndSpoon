@@ -12,7 +12,7 @@ struct CartaoPratoView: View {
     @Environment(\.colorScheme) var colorScheme
     
     var corTextoTitulo: Color {
-        colorScheme == .dark ? .white : darkBlue
+        colorScheme == .dark ? gold : gold
     }
     
     var corFundoCartao: Color {
@@ -76,7 +76,7 @@ struct CartaoPratoView: View {
         }
         .padding(.horizontal, 9)
         .padding(.vertical, 8)
-        .background(.ultraThickMaterial)
+        .background(.ultraThinMaterial)
         .clipShape(Capsule())
         .overlay(
             Capsule()
@@ -91,23 +91,24 @@ struct CartaoPratoView: View {
         HStack(spacing: 5) {
             Text("0%")
                 .font(.caption.bold())
+                .foregroundStyle(corTextoTitulo)
 
-            Text("SEM ÁLCOOL")
-                .font(.caption)
-                .fontWeight(.bold)
-                .foregroundStyle(.secondary)
+
+            Text("ÁLCOOL")
+                .font(.caption.bold())
+                .foregroundStyle(corTextoTitulo)
                 .tracking(1)
         
         }
-        .padding(.horizontal, 9)
-        .padding(.vertical, 8)
+        .padding(.horizontal, 10)
+        .padding(.vertical, 10)
         .clipShape(Capsule())
         .overlay(
             Capsule()
                 .stroke(gold, lineWidth: 0.8)
         )
         .shadow(color: .black.opacity(0.4), radius: 4, x: 0, y: 2)
-        .padding(11)
+        .padding(.leading, 200)
     }
     
     private var versoCartao: some View {
@@ -150,11 +151,11 @@ struct CartaoPratoView: View {
         CartaoPratoView(
             prato: PratoItem(
                 name: "Filé mignon ao molho de vinho do Porto",
-                imagem: "Bife",
+                imagem: "Botanico",
                 preco: "€49,99",
                 descricao: "Filé mignon grelhado ao ponto perfeito, servido com um rico molho de vinho do Porto e acompanhado de um purê de batatas.",
                 categoria: .pratosPrincipais,
-                isRecomendacaoChefe: true
+                isSemAlcool: true
             )
         )
 }

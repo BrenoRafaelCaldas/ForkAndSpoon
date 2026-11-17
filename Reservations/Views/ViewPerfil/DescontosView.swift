@@ -19,9 +19,8 @@ struct DescontosView: View {
                 .frame(width: 200, height: 200)
                 .padding(.bottom)
             
-            Text("DESCONTOS PAGE")
-                .font(.largeTitle.bold())
-                .lineLimit(1)
+            Text("CLUBE FORK & SPOON PAGE")
+                .font(.title.bold())
         }
     }
 }
