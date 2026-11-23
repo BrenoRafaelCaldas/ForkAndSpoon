@@ -15,7 +15,7 @@ struct HomeView: View {
                 Image("Logo")
                     .resizable()
                     .scaledToFill()
-                    .frame(width: 400, height: 380)
+                    .frame(width: 400, height: 350)
                 
                 Text("Conheça nossas lojas")
                     .font(.body)

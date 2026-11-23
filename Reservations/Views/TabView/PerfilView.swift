@@ -213,7 +213,7 @@ struct PerfilView: View {
                     }
                                 
             }
-            .padding(.top, 60)
+            .padding(.top, 50)
             .padding(.bottom, 90)
             .ignoresSafeArea()
             .listStyle(.plain)

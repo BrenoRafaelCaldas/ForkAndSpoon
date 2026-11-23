@@ -40,6 +40,9 @@ struct ReservasView: View {
                 }
                 .padding()
             }
+            .navigationTitle("RESERVAS")
+            .navigationBarTitleDisplayMode(.inline)
+
             
         }
         
@@ -131,9 +134,9 @@ struct ReservasView: View {
     private func corDoStatus(_ status : String) -> Color {
         switch status {
         case "Confirmada":
-            return .accentColor.opacity(0.9)
+            return .green.opacity(0.9)
         case "Cancelada":
-            return .red.opacity(0.8)
+            return .red.opacity(0.7)
         case "Concluído":
             return .gray
         default:
